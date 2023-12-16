@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap');
+
+body{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+.rps-button{
+    border: none;
+}
+img{
+    width: 250px;
+}
+#round-button{
+    font-family: "Oswald";
+    font-size: 1.5em;
+    display: none;
+    
+}

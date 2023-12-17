@@ -8,15 +8,21 @@
     </head>
     <body> 
         <h1>Rock Paper Scissors</h1>
-
+        <h2>Your choice:</h2>
         <button class="rps-button" id="Rock"><img class="rps-img" src="Assets/Rock.png" draggable="false"></button>
         <button class="rps-button" id="Paper"><img class="rps-img" src="Assets/Paper.png" draggable="false"></button>
         <button class="rps-button" id="Scissors"><img class="rps-img" src="Assets/Scissors.png" draggable="false"></button><br>
         
+        <h2>Computer choice:</h2>
         <img id="computer-choice" src="Assets/Undecided.png" draggable="false">
 
         <h2>Result:<br><span id="result-text">Undecided</span></h2>
-        <button id="round-button">START NEW ROUND</button>
+        
+        <div class="end-screen">
+            <p>Player score: <span id="player-score"></span></p>
+            <button id="round-button">START NEW ROUND</button>
+            <p>Computer score: <span id="computer-score"></span></p>
+        </div>
 
     </body>
     <script src="index.js"></script>

@@ -2,7 +2,10 @@ const playerInputOptions = document.querySelectorAll(".rps-button");
 const computerChoiceDisplay = document.querySelector("#computer-choice");
 const resultText = document.querySelector("#result-text");
 const resetGame = document.querySelector("#round-button");
-
+const playerScoreDisplay = document.querySelector("#player-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
+let playerScore = 1;
+let computerScore = 1;
 
 playerInputOptions.forEach(inputOption => inputOption.addEventListener("click", () => {
   playerChoice = inputOption.id
@@ -35,6 +38,7 @@ resetGame.addEventListener("click", () => {
   playerInputOptions.forEach(option => {
     option.style.display = "inline-block";
   })
+  resultText.textContent = "Undecided"
 })
 
 function changeComputerChoiceDisplay() {
@@ -49,30 +53,36 @@ function changeComputerChoiceDisplay() {
   }
 } 
 function whoWins() {
-
   if(playerChoice == "Rock" && computerChoice == "Scissors"){
-    resultText.innerHTML = "You won!"
+    playerWon();
   }
   else if (playerChoice == "Rock" && computerChoice == "Paper") {
-    resultText.innerHTML = "You lost!"
+    computerWon ();
   }
 
   if(playerChoice == "Paper" && computerChoice == "Rock"){
-    resultText.innerHTML = "You won!"
+    playerWon();
   }
   else if (playerChoice == "Paper" && computerChoice == "Scissors") {
-    resultText.innerHTML = "You lost!"
+    computerWon ();
   }
 
   if(playerChoice == "Scissors" && computerChoice == "Paper"){
-    resultText.innerHTML = "You won!"
+    playerWon();
   }
   else if (playerChoice == "Scissors" && computerChoice == "Rock") {
-    resultText.innerHTML = "You lost!"
+    computerWon ();
   }
 
   if(playerChoice == computerChoice) {
     resultText.innerHTML = "It's a draw!"
   }
-
+}
+function playerWon() {
+  resultText.innerHTML = "You won!"
+  playerScoreDisplay.innerHTML = playerScore++
+}
+function computerWon() {
+  resultText.innerHTML = "You lost!"
+  computerScoreDisplay.innerHTML = computerScore++
 }

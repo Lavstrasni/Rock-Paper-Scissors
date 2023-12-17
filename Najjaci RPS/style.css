@@ -11,8 +11,13 @@ img{
     width: 250px;
 }
 #round-button{
-    font-family: "Oswald";
-    font-size: 1.5em;
     display: none;
     
+}
+.end-screen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: "Oswald";
+    font-size: 1.5em;
 }
